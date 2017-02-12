@@ -1,17 +1,17 @@
 #iron-config
 This is a config file reader for Iron framework(an web framework writen in Rust).
 
-You can put all you setting in a file which names Iron.toml.
+You can put all you settings in a file which names Iron.toml.
 
-#It will search Iron.toml by this order:
+##It will search Iron.toml by this order:
 
-1, The value of IRON_CONFIG_FILE in environment variable.
+1, `The value of IRON_CONFIG_FILE in environment variable.`
 
-2, ./Iron.toml
+2, `./Iron.toml`
 
-3, ./site/Iron.toml
+3, `./site/Iron.toml`
 
-#Usage:
+##Usage:
 In you Cargo.toml:
 
 ```toml
@@ -29,5 +29,10 @@ In you crate:
     }
     prinln!("{:?}",*DOMAIN);
 ```
+## License
 
+Rocket is licensed under either of the following, at your option:
+
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT License ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
