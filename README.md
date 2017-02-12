@@ -1,4 +1,4 @@
-#iron-config
+#iron_config
 This is a config file reader for Iron framework(an web framework writen in Rust).
 
 You can put all you settings in a file which names Iron.toml.
@@ -16,18 +16,23 @@ In you Cargo.toml:
 
 ```toml
     [dependencies]
-    iron-config = "0.1.0"
+    iron_config = "0.1.0"
     lazy_static = "*"
 ```
 In you crate:
 
 ```rust
-    extern crate iron-config;
-    use iron-config::IC;
+    extern crate iron_config;
+    use iron_config::IC;
+    #[macro_use]
+    extern crate lazy_static;
     lazy_static!{
-        static ref DOMAIN: &'static str = IC.lookup("MAIN.DOMAIN").unwrap().as_str().unwrap();
+       static ref DOMAIN: &'static str = IC.lookup("MAIN.DOMAIN").unwrap().as_str().unwrap();
+     }
+
+    fn main() {
+        println!("{:?}",*DOMAIN); 
     }
-    prinln!("{:?}",*DOMAIN);
 ```
 ## License
 
