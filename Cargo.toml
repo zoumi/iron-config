@@ -10,5 +10,5 @@ license = "Apache License 2.0/MIT License"
 
 
 [dependencies]
-lazy_static = "*"
-toml = "*"
+lazy_static = "0.2.8"
+toml = "0.4.5"
